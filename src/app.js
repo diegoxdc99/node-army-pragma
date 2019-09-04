@@ -3,15 +3,15 @@ const config = require('./config')
 
 async function startServer () {
   const app = express()
-  await require('./loaders')(app)
+  await require('./loaders')(app) // Start the loaders configuration
 
   app.listen(config.port, (err) => {
     if (err) {
-      console.log('Hay un error')
+      console.log('there is an error')
       process.exit(1)
       return
     }
-    console.log(`Servidor iniciado en el puerto ${config.port}`)
+    console.log(`Server started on the port ${config.port}`)
   })
 }
 

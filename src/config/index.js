@@ -2,9 +2,9 @@ const dotenv = require('dotenv')
 
 process.env.NODE_ENV = process.env.NODE_ENV || 'develop'
 
-const envFound = dotenv.config()
+const envFound = dotenv.config() // load the .env file
 if (!envFound) {
-  console.log('No existe el archiv .env')
+  console.log('File .env does not exist')
 }
 
 module.exports = {
