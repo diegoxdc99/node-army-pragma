@@ -11,5 +11,8 @@ module.exports = {
   port: process.env.PORT || 5000,
   logs: {
     level: process.env.LOG_LEVEL || 'silly'
+  },
+  auth: {
+    secret: process.env.SECRET
   }
 }
