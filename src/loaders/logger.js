@@ -4,7 +4,12 @@ const config = require('../config')
 const transports = []
 if (process.env.NODE_ENV !== 'development') {
   transports.push(
-    new winston.transports.Console()
+    new winston.transports.Console({
+      format: winston.format.combine(
+        winston.format.cli(),
+        winston.format.splat()
+      )
+    })
   )
 } else {
   transports.push(

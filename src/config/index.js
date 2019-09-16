@@ -14,5 +14,8 @@ module.exports = {
   },
   auth: {
     secret: process.env.SECRET
+  },
+  db: {
+    url: process.env.DB_URL
   }
 }

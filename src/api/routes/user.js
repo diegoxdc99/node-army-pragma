@@ -11,6 +11,8 @@ const { users } = require('../../controller')
 module.exports = (app) => {
   app.use('/users', route) // Creating a user route
 
+  route.route('/')
+    .post(users.createUser)
   // Specific routes for the user /users/*
   route.route('/me')
     .get(users.getMe)

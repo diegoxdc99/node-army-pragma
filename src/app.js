@@ -1,5 +1,6 @@
 const express = require('express')
 const config = require('./config')
+const logger = require('./loaders/logger')
 
 async function startServer () {
   const app = express()
@@ -11,7 +12,7 @@ async function startServer () {
       process.exit(1)
       return
     }
-    console.log(`Server started on the port ${config.port}`)
+    logger.info(`Server started on the port ${config.port}`)
   })
 }
 
